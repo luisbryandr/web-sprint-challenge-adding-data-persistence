@@ -23,17 +23,17 @@ In this project you will be given a set of requirements and must design a databa
 
 1.[X] `package.json`
 2. [x]`index.js`
-3. `api/server.js`
+3. [X]`api/server.js`
 4. `model.js` inside `api/project`, `api/resource` and `api/task`
 5. `router.js` inside `api/project`, `api/resource` and `api/task`
 6. migration file(s)
 7. seed file(s) **optional**
 
-### Required Dependencies
+### Required Dependencies - Done
 
 The project needs some additional NPM dependencies in order to work.
 
-### Required Scripts
+### Required Scripts -DONE
 
 Add `"start"`. `"server"`, `"migrate"` and `"rollback"` scripts to the `package.json` file. The tests depend on these scripts being correct!
 
@@ -99,18 +99,27 @@ Build an API inside the `api` folder with endpoints for:
 - Delete `test.db3` and `database.db3` and re-run migrations and tests, if you suspect half-finished code left your databases in a broken state.
 - In your solution, it is essential that you follow best practices and produce clean and professional results.
 
-## Submission format
+## Submission format DONE
 
-- [ ] Submit via Codegrade by pushing commits to your `main` branch on Github.
+- [X] Submit via Codegrade by pushing commits to your `main` branch on Github.
 - [ ] Check Codegrade before the deadline to compare its results against your local tests.
 - [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
-- [ ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
+- [X] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
 
-## Interview Questions
+## Interview Questions -DONE
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between Relational Databases and SQL.
+
+ The difference between Relational Databases and SQL is that SQL is a management system for Relational Databases.  In other words, SQL is used to create, maintain, update and query data inside of Relational Databases.  SQL databases are an example of relational databases
 2. Why do tables need a Primary Key?
+
+Tables need a primary Key because they allow the whole record,(regardless of how many attributes--colummns--- it has to be uniquely identified.  Makes sure the record is unique--doesn't have a repeated value)
 3. What is the name given to a table column that references the Primary Key on another table?
+
+Foreign Key
+
 4. What do we need in order to have a _many to many_ relationship between two tables?
+
+We need an intermediary table to hold foreign keys that reference the primary keys in the tables we are trying to relate. 

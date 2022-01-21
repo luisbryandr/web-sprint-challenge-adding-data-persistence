@@ -18,7 +18,7 @@ const projects = [
 
 exports.seed = function (knex) {
     //Deletes ALL existing entries
-    return knex('projects').truncates()
+    return knex('projects').truncate()
         .then(function () {
             //Inserts seeed entries
             return knex('projects').insert(projects);

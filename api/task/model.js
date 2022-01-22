@@ -25,6 +25,28 @@ const getAll = async () => {
     return tasks
 }
 
+const getTask = async (taskId) => {
+    const [task] = await db('tasks').where('tasks_id', taskId)
+    if(task.task_completed === 1) {
+        return {
+            ...task,
+            task_completed:true,
+        }
+    }else if(task.task_completed === 0){
+        return {
+            ...task,
+            task_completed: false
+        }
+    }
+    return task
+}
+const create = async (task) => { 
+    const [ newTaskId ] = await db('tasks').insert(task)
+    const newTask = await getTask(newTaskId)
+    return newTask
+}
 module.exports = {
-    getAll
+    getAll,
+    create, 
+    getTask
 }

@@ -15,7 +15,11 @@ router.get('/', (req, res, next) => {
 })
 
 router.post('/', (req, res, next) => {
-    console.log('post tasks router wired')
+    Task.create(req.body)
+        .then(newTask => {
+            res.status(201).json(newTask)
+        })
+        .catch(next)
 })
 
 module.exports = router;
